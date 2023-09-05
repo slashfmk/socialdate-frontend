@@ -8,7 +8,7 @@ import { UserDto } from '../models/UserDto';
   providedIn: 'root',
 })
 //  @Injectable()
-export class UserLoginService {
+export class AuthService {
   private http = inject(HttpClient);
   private apiUrl = 'https://localhost:5001/api';
 

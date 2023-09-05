@@ -9,7 +9,7 @@ import {
 } from '@angular/forms';
 
 import { MenuComponent } from '../menu/menu.component';
-import { UserLoginService } from 'src/app/api/services/user-login.service';
+import { AuthService } from 'src/app/api/services/auth.service';
 import { LoginDto } from 'src/app/api/models/LoginDto';
 
 @Component({
@@ -22,7 +22,7 @@ import { LoginDto } from 'src/app/api/models/LoginDto';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [UserLoginService],
+  providers: [AuthService],
   template: `
     <header
       class="flex flex-row gap-7 items-center  content-evenly w-full h-auto bg-gray-700 text-lg text-white font-light p-2"
@@ -61,12 +61,12 @@ export class HeaderComponent implements OnInit {
   // attributes
   private http = inject(HttpClient);
   private formBuilder = inject(FormBuilder);
-  private loginService = inject(UserLoginService);
+  private loginService = inject(AuthService);
 
   // log inform handler
   form = this.formBuilder.group({
-    username: ['', Validators.required],
-    password: ['', Validators.required, Validators.minLength(8)],
+    username: ['', [Validators.required]],
+    password: ['', [Validators.required]],
   });
 
   ngOnInit(): void {
