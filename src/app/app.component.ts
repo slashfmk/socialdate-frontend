@@ -10,10 +10,9 @@ import { FooterComponent } from './components/footer/footer.component';
     <router-outlet></router-outlet>
     <app-footer />
   `,
-  styles: [],
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
 })
 export class AppComponent {
-  title = 'socialfnd';
+  title = 'Social date | Date as much as it pleases you';
 }
