@@ -6,13 +6,13 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <p>
-      footer works!
-    </p>
+    <div class="grid grid-cols-4 h-44 bg-black text-gray-400 p-8">
+      <div>About us</div>
+      <div>Confidentiality</div>
+      <div>Other rules</div>
+      <div>Other rules</div>
+    </div>
   `,
-  styles: [
-  ]
+  styles: [],
 })
-export class FooterComponent {
-
-}
+export class FooterComponent {}
