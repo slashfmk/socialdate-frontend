@@ -2,17 +2,17 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-messages',
   standalone: true,
   imports: [CommonModule],
   template: `
     <p>
-      home works!
+      messages works!
     </p>
   `,
   styles: [
   ]
 })
-export class HomeComponent {
+export class MessagesComponent {
 
 }

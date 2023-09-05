@@ -2,17 +2,17 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-profile',
+  selector: 'app-lists',
   standalone: true,
   imports: [CommonModule],
   template: `
     <p>
-      profile works!
+      lists works!
     </p>
   `,
   styles: [
   ]
 })
-export class ProfileComponent {
+export class ListsComponent {
 
 }

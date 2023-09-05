@@ -11,25 +11,25 @@ import { RouterModule } from '@angular/router';
       <li>
         <a
           class=""
-          [routerLink]="['/home']"
+          [routerLink]="['/matches']"
           routerLinkActive="router-link-active"
-          >Home</a
+          >Matches</a
         >
       </li>
       <li>
         <a
           class=""
-          [routerLink]="['/profile']"
+          [routerLink]="['/lists']"
           routerLinkActive="router-link-active"
-          >Profile</a
+          >Lists</a
         >
       </li>
       <li>
         <a
           class=""
-          [routerLink]="['/about']"
+          [routerLink]="['/messages']"
           routerLinkActive="router-link-active"
-          >About</a
+          >Messages</a
         >
       </li>
     </ul>

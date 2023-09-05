@@ -1,18 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { ProfileComponent } from './pages/profile/profile.component';
+
+import { MatchesComponent } from './pages/matches/matches.component';
+import { ListsComponent } from './pages/lists/lists.component';
+import { MessagesComponent } from './pages/messages/messages.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: '', component: MatchesComponent },
+  { path: 'matches', component: MatchesComponent },
   {
-    path: 'about',
+    path: 'messages',
     loadComponent: () =>
-      import('./pages/about/about.component').then((c) => c.AboutComponent),
+      import('./pages/messages/messages.component').then(
+        (c) => c.MessagesComponent
+      ),
   },
-  { path: '**', redirectTo: 'home' },
+  {
+    path: 'lists',
+    loadComponent: () =>
+      import('./pages/lists/lists.component').then((c) => c.ListsComponent),
+  },
+  { path: '**', redirectTo: 'matches' },
 ];
 
 @NgModule({

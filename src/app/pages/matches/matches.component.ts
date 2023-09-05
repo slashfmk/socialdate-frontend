@@ -2,17 +2,17 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-matches',
   standalone: true,
   imports: [CommonModule],
   template: `
     <p>
-      about works!
+      matches works!
     </p>
   `,
   styles: [
   ]
 })
-export class AboutComponent {
+export class MatchesComponent {
 
 }
